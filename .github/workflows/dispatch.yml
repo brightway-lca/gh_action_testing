@@ -1,14 +1,11 @@
 name: dispatch test
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
+on: workflow_dispatch
+  
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        gh workflow run github_action_update_submodules.yml -R brightway-lca/brightway-documentation
+      - name: Run workflow
+        run: |
+          gh workflow run github_action_update_submodules.yml -R brightway-lca/brightway-documentation
