@@ -11,3 +11,5 @@ jobs:
     re-use_workflow:
       uses:
         brightway-lca/brightway-documentation/.github/workflows/github_action_trigger_submodule_pull_main.yml@main
+      env:
+        GH_TOKEN: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
