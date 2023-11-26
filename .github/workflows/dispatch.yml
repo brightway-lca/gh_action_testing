@@ -15,4 +15,4 @@ jobs:
         run: | # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
           gh workflow run github_action_update_submodules.yml -R brightway-lca/brightway-documentation
         env:
-          GH_TOKEN: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
+          GH_TOKEN: ${{ github.token }}
